@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="VLP-16">
+
+  <!-- Should be the same constants as in the warthog_velodyne.urdf.xacro file -->
+  <xacro:property name="chassis_height" value="0.30" />
+  <xacro:property name="lidar_stand_length" value="0.25" />
+
+  <!-- Put the Lidar at the correct height, given the constants -->
+  <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+  <VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" hz="20" samples="1200">
+    <origin xyz="0 0 ${chassis_height + lidar_stand_length}" rpy="0 0 0" />
+  </VLP-16>
+</robot>
+
