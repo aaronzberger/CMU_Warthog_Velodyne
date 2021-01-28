@@ -2,6 +2,8 @@
 
 Simulator (Gazebo and RVIZ) for the Clearpath Warthog Robot with an attached VLP-16 Lidar and camera.
 
+If you have any questions, or if this module does not work for you, please contact me at azberger@andrew.cmu.edu
+
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
