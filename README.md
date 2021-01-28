@@ -30,7 +30,7 @@ Test your installation by [running the package](#usage)
 ## Usage
 
 You'll always use this command to run:  
-`roslaunch warthog_velodyne warthog_vlp16.launch`
+`roslaunch warthog_velodyne warthog_vlp16.launch world_name:=[WORLD_PATH]`
 
 This will launch Gazebo and RVIZ with a Warthog robot, using the world file specified in the [`warthog_vlp16.launch`](#code-structure)
 
@@ -57,7 +57,7 @@ That module can be found [HERE](https://github.com/aaronzberger/CMU_Vineyard_Wor
     ├── launch  
     │   ├── description.launch  --> Selects warthog_velodne.urdf.xacro as the custom robot model to use  
     │   ├── spawn_warthog.launch  --> Modify lines 6-9 to change robot starting position (launches description.launch)  
-    │   └── warthog_vlp16.launch  --> Modify line 28 to select which world you wish to launch in (launches RVIZ, Gazebo, and spawn_warthog.launch)  
+    │   └── warthog_vlp16.launch  --> Launches RVIZ, Gazebo, and spawn_warthog.launch  
     │  
     ├── urdf  
     │   ├── empty.urdf  --> An empty urdf file is required to run  
