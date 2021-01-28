@@ -29,7 +29,18 @@ Test your installation by [running the package](#usage)
 
 ## Usage
 
+You'll always use this command to run:  
 `roslaunch warthog_velodyne warthog_vlp16.launch`
+
+This will launch Gazebo and RVIZ with a Warthog robot, using the world file specified in the [`warthog_vlp16.launch`](#code-structure)
+
+The Lidar will automatically publish point clouds to the `/velodyne_points` ROS topic,  
+and the camera will automatically publish images to the `/warthog/camera1/image_raw` ROS topic.
+
+To view the point clouds and images live, add the visualizations in RVIZ:  
+
+   `Add` -> `By topic` -> `PointCloud2` or `/image_raw/Camera`
+
 
 ## Worlds
 
