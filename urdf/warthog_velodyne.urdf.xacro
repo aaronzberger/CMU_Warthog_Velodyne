@@ -368,14 +368,14 @@
   <xacro:property name="camera_box" value="0.075" /> <!-- Size of square 'camera' box -->
   <joint name="camera_joint" type="fixed">
     <axis xyz="0 0 0" />
-    <origin xyz="${(chassis_length / 2) - (camera_box / 2) - 0.02} 0 ${chassis_height + (camera_box / 2) - 0.01}" rpy="0 0 0"/>
+    <origin xyz="${(chassis_length / 2) - (camera_box / 2) - 0.02 + 0.1} 0 ${chassis_height + (camera_box / 2) - 0.01}" rpy="0 3.141592654 3.141592654"/>
     <parent link="base_link"/>
     <child link="camera_link"/>
   </joint>
 
   <link name="camera_link">
     <collision>
-      <origin xyz="0 0 10" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
     <box size="${camera_box / 2} ${camera_box} ${camera_box}"/>
       </geometry>
@@ -406,8 +406,8 @@
 	<!-- Tweak these parameters for the specs of your desired camera -->
         <horizontal_fov>1.4</horizontal_fov>
         <image>
-          <width>800</width>
-          <height>800</height>
+          <width>1280</width>
+          <height>720</height>
           <format>R8G8B8</format>
         </image>
         <clip>

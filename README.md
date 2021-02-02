@@ -44,7 +44,7 @@ To view the point clouds and images live, add the visualizations in RVIZ:
 
 ## Worlds
 
-This module only contains one world by default: `empty.world`, which is an empty Gazebo world.
+This module only contains three worlds by default: `empty.world`, `flat_terrain_easy.world` and `rough_terrain_hard.world`.
 
 However, I also built a module to create new worlds with simulated vineyards.
 
@@ -64,13 +64,16 @@ That module can be found [HERE](https://github.com/aaronzberger/CMU_Vineyard_Wor
     │   ├── VLP-16.urdf  --> Modify lines 5-6 to change Lidar position (launches Lidar)  
     │   └── warthog_velodyne.urdf.xacro  --> Custom Warthog model containing a Lidar and camera
     │  
-    ├── vine_models  --> Vine models to copy to your gazebo models folder (~/.gazebo/models)
+    ├── vine_models  --> Terrain and vine models to copy to your gazebo models folder (~/.gazebo/models)
+    │   ├── Roug_terrain  
     │   ├── Vine1  
     │   ├── Vine2  
     │   └── Vine3  
     │  
     ├── worlds  
-    │   └── empty.world  --> An empty world, to use until you [create custom ones](https://github.com/aaronzberger/CMU_Vineyard_World_Creator) 
+    │   └── empty.world  --> An empty world, to use until you [create custom one](https://github.com/aaronzberger/CMU_Vineyard_World_Creator)
+    │   └── flat_terrain_easy.world  --> World to simulate vines placed in rows on flat terrain. Easy difficulty from  perception and control purposes. 
+    │   └── rough_terrain_hard.world  --> World to simulate vines placed in rows on rough not flat terrain. Poses a harder dificulty for perception and control.
     │
     ├── CMakeLists.txt  --> ROS Required for compilation  
     └── package.xml  --> ROS Required for compilation  
